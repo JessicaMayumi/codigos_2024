@@ -1,0 +1,21 @@
+{% extends 'template.html' %}
+
+{% block tituloPagina %}
+  <h1>{% block title %}Formulário de Cadastro{% endblock %}</h1>
+{% endblock %}
+
+{% block main %}
+<form action="adicionar_pessoa">
+    <p>
+        Nome: <input type="text" name="nome" value="May">
+    </p>
+    <p>
+        Email: <input type="text" name="email" value="may@gmail.com">
+    </p>
+    <p>
+        Telefone: <input type="text" name="telefone" value="47 9 9123 4567">
+    </p>
+
+    <button>Cadastrar</button>
+
+{% endblock %}

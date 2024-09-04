@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gatos - {% block title %}{% endblock %}</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+        * {
+            font-family: "Chewy", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            color: #00034f;
+        }
+        body{
+            background-color: #ffd9de;
+        }
+        .div-header{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            align-content: center;
+            font-size: 30px;
+            background-color: #00034f;
+            padding: 20px;
+        }
+
+        .div-header a{
+            text-decoration: none;
+            color: #ffd9de;
+        }
+        .div-header a:hover{
+            color: #ff8cbc;
+        }
+    </style>
+
+{% block estilo %}{% endblock %}
+
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center; font-size: 50px;">Cadastro de GATOS</h1>
+        <div class="div-header">
+            <a href="{{ url_for("index") }}">Início</a>
+            <a href="{{ url_for("about") }}">Sobre</a>
+            <a href="{{ url_for("listar") }}">Lista</a>
+        </div>
+    </header>
+    <section class="main" style="text-align: center; font-size: 25px; ">
+        {% block tituloPagina %}{% endblock %}
+        {% block main %}{% endblock %}
+    </section>
+</body>
+</html>

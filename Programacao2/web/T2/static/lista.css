@@ -1,0 +1,32 @@
+table {
+    justify-items: center;
+    border-collapse: collapse;
+    text-align: center;
+  }
+
+
+td {
+    padding-left: 10px;
+    padding-right: 10px;
+    border-color: #00034f;
+}
+
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cad {
+    text-decoration: none;
+    background-color: #00034f;
+    color: #ffd9de;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 30px;
+}
+
+.cad:hover{
+    background-color: #5761f0;
+}

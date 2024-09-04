@@ -1,0 +1,34 @@
+{% extends 'template.html'%}
+
+{% block estilo %}
+<link rel="stylesheet" href="{{ url_for('static', filename='form.css') }}">
+{% endblock %}
+
+{% block tituloPagina %}
+  <h1>{% block title %}Formulário de Cadastro{% endblock %}</h1>
+{% endblock %}
+
+{% block main %}
+<form action="adicionar_pessoa">
+    <p>
+        Nome do Animal: <input type="text" name="nomeAnimal" value="Pompom">
+    </p>
+    <p>
+        Gênero: <input type="radio" name="genero" value="Macho">Macho<input type="radio" name="genero" value="Fêmea">Fêmea
+    </p>
+    <p>
+        Nome do Dono: <input type="text" name="nomeDono" value="May">
+    </p>
+    <p>
+        Raça: <input type="text" name="raca" value="viralata">
+    </p>
+    <p>
+        Cor: <input type="text" name="cor" value="Preto">
+    </p>
+    <p>
+        Doença (caso possua): <input type="text" name="doenca" value="Não tem">
+    </p>
+
+    <button>Cadastrar</button>
+
+{% endblock %}

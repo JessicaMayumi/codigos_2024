@@ -1,0 +1,43 @@
+
+{% extends 'template.html' %}
+
+
+{% block estilo %}
+<link rel="stylesheet" href="{{ url_for('static', filename='lista.css') }}">
+{% endblock %}
+
+{% block tituloPagina %}
+  <h1>{% block title %}Listagem de GATOS{% endblock %}</h1>
+{% endblock %}
+
+{% block main %}
+  
+<p>
+    <a class="cad" href="{{ url_for("form") }}">Cadastrar Novo GATO</a>
+</p>
+
+<div>
+    <table border="1">
+        <tr>
+            <td>Nome do Animal</td>
+            <td>Gênero</td>
+            <td>Nome do Dono</td>
+            <td>Raça</td>
+            <td>Cor</td>
+            <td>Doença</td>
+        </tr>
+
+        {% for p in gatos %}
+        <tr>
+            <td>{{p.nomeAnimal}}</td>
+            <td>{{p.genero}}</td>
+            <td>{{p.nomeDono}}</td>
+            <td>{{p.raca}}</td>
+            <td>{{p.cor}}</td>
+            <td>{{p.doenca}}</td>
+        </tr>
+        {% endfor %}
+    
+    </table>
+</div>
+{% endblock %}
