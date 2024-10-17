@@ -24,9 +24,9 @@ def play(escolha):
     mensagem_resultado = ""
     
     if jogada_AI == movimento_geral:
-        mensagem_resultado = 'AI ACERTOU, Você errou!\nTENTE NOVAMENTE!'
+        mensagem_resultado = 'A Inteligência Artificial ACERTOU, Você errou!\nTENTE NOVAMENTE!'
     elif escolha == movimento_geral:
-        mensagem_resultado = 'AI errou, Você ACERTOU!'
+        mensagem_resultado = 'A Inteligência Artificial, Você ACERTOU!\nPARABÉNS!'
     
     return f"AI escolheu: {jogada_AI}\nVocê escolheu: {escolha}\nCaiu: {movimento_geral}\n{mensagem_resultado}"
 
