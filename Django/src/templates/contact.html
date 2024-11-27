@@ -1,0 +1,19 @@
+{%  extends 'template.html' %}
+
+
+{% block content %}
+    <h1>{{ title|capfirst }}</h1>
+    <p>{{ text }}</p>
+    <p>{{ number }}</p>
+
+    <ul>
+        {% for item in list %}
+            {% if item|divisibleby:2 != 0 %}
+                <li style="color: red">{{ forloop.counter }}. {{ item }} - ímpar</li>
+            {% else %}
+                <li style="color: cadetblue">{{ forloop.counter }}. {{ item }} - par</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+{% endblock %}

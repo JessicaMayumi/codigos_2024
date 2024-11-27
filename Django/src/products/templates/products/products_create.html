@@ -1,0 +1,13 @@
+{%  extends 'template.html' %}
+
+
+{% block content %}
+<form action="." method="POST">  {% csrf_token %}
+
+{{ form.as_p }}
+<input type="text" name="title">
+<input type="submit" value="Criar">
+
+</form>
+<p>Atualizado</p>
+{% endblock %}
