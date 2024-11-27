@@ -1,0 +1,13 @@
+# Ignorar o cache do Python
+__pycache__/
+*.pyc
+
+# Ignorar migrações específicas (opcional)
+products/migrations/*.pyc
+products/migrations/__pycache__/
+
+# Ignorar o ambiente virtual
+venv/
+
+# Ignorar arquivos temporários do editor
+.idea/
